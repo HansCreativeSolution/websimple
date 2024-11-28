@@ -1,0 +1,205 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADR Tower</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <div class="flex items-center">
+                <img src="https://i.postimg.cc/vHjPFL14/logo-adr-tower-removebg-preview.png" alt="ADR Tower Logo" class="h-12 mr-4">
+                <img src="https://i.postimg.cc/YSN8W5dF/logo-adriya.png" alt="Adriya Logo" class="h-12">
+            </div>
+            <div class="relative">
+                <button id="menu-toggle" class="block md:hidden text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <nav id="menu" class="hidden md:flex space-x-4">
+                    <a href="#home" class="text-gray-700 hover:text-gray-900">Home</a>
+                    <a href="#about" class="text-gray-700 hover:text-gray-900">About</a>
+                    <a href="#facilities" class="text-gray-700 hover:text-gray-900">Facilities</a>
+                    <a href="#office-space" class="text-gray-700 hover:text-gray-900">Office Space</a>
+                    <a href="#gallery" class="text-gray-700 hover:text-gray-900">Gallery</a>
+                    <a href="#contact" class="text-gray-700 hover:text-gray-900">Contact Us</a>
+                </nav>
+                <div id="dropdown-menu" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg md:hidden">
+                    <a href="#home" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Home</a>
+                    <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">About</a>
+                    <a href="#facilities" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Facilities</a>
+                    <a href="#office-space" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Office Space</a>
+                    <a href="#gallery" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Gallery</a>
+                    <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Contact Us</a>
+                </div>
+            </div>
+            <div class="flex space-x-4">
+                <button id="lang-en" class="text-gray-700 hover:text-gray-900">EN</button>
+                <button id="lang-id" class="text-gray-700 hover:text-gray-900">ID</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="bg-cover bg-center h-screen" style="background-image: url('https://i.postimg.cc/cJf1MCSH/0.webp');">
+        <div class="container mx-auto h-full flex flex-col justify-center items-center text-center text-white">
+            <h1 class="text-5xl font-bold" data-en="ADR Tower - Designed for Your Dream Lifestyle" data-id="ADR Tower - Dirancang untuk Gaya Hidup Impian Anda">ADR Tower - Designed for Your Dream Lifestyle</h1>
+            <p class="text-2xl mt-4" data-en="The new landscape of work is here. Own it." data-id="Lanskap kerja baru telah hadir. Miliki sekarang.">The new landscape of work is here. Own it.</p>
+            <a href="#about" class="mt-8 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700" data-en="Learn More" data-id="Pelajari Lebih Lanjut">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8" data-en="About ADR Tower" data-id="Tentang ADR Tower">About ADR Tower</h2>
+            <p class="text-lg mb-8" data-en="A commanding presence located at the heart of North Jakarta’s expansive business district, surrounded by a flourishing community." data-id="Kehadiran yang mengesankan terletak di jantung distrik bisnis luas Jakarta Utara, dikelilingi oleh komunitas yang berkembang.">A commanding presence located at the heart of North Jakarta’s expansive business district, surrounded by a flourishing community.</p>
+            <img src="https://i.postimg.cc/g2WZZnQM/MAP-HD.jpg" alt="Map showing the location of ADR Tower with icons for important places around" class="mx-auto mb-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4" data-en="Strategic Location" data-id="Lokasi Strategis">Strategic Location</h3>
+                    <p data-en="Located at Jl. Pantai Indah Kapuk Boulevard, North Jakarta, ADR Tower is surrounded by key business and leisure destinations." data-id="Terletak di Jl. Pantai Indah Kapuk Boulevard, Jakarta Utara, ADR Tower dikelilingi oleh tujuan bisnis dan rekreasi utama.">Located at Jl. Pantai Indah Kapuk Boulevard, North Jakarta, ADR Tower is surrounded by key business and leisure destinations.</p>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4" data-en="Architectural Excellence" data-id="Keunggulan Arsitektur">Architectural Excellence</h3>
+                    <p data-en="Designed with modern architectural principles, ADR Tower stands as a beacon of innovation and excellence in the heart of the city." data-id="Dirancang dengan prinsip arsitektur modern, ADR Tower berdiri sebagai mercusuar inovasi dan keunggulan di jantung kota.">Designed with modern architectural principles, ADR Tower stands as a beacon of innovation and excellence in the heart of the city.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="facilities" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8" data-en="Holistic Facilities for Work and Life" data-id="Fasilitas Holistik untuk Kerja dan Kehidupan">Holistic Facilities for Work and Life</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div>
+                    <img src="https://i.postimg.cc/kMHrGC0h/wellness-center.webp" alt="Wellness Centre with gym and sports area" class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2" data-en="Wellness Centre" data-id="Pusat Kebugaran">Wellness Centre</h3>
+                    <p data-en="State-of-the-art gym and sports facilities to keep you fit and healthy." data-id="Pusat kebugaran dan fasilitas olahraga canggih untuk menjaga kebugaran dan kesehatan Anda.">State-of-the-art gym and sports facilities to keep you fit and healthy.</p>
+                </div>
+                <div>
+                    <img src="https://i.postimg.cc/v82ynfVh/meeting-room.webp" alt="Modern meeting room with advanced technology" class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2" data-en="Meeting Rooms" data-id="Ruang Rapat">Meeting Rooms</h3>
+                    <p data-en="Modern meeting rooms equipped with the latest technology for seamless business interactions." data-id="Ruang rapat modern dilengkapi dengan teknologi terbaru untuk interaksi bisnis yang lancar.">Modern meeting rooms equipped with the latest technology for seamless business interactions.</p>
+                </div>
+                <div>
+                    <img src="https://i.postimg.cc/MKXW3dSg/co-working-spaces.webp" alt="Co-working spaces for collaboration" class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2" data-en="Co-working Spaces" data-id="Ruang Kerja Bersama">Co-working Spaces</h3>
+                    <p data-en="Collaborative spaces designed to foster creativity and teamwork." data-id="Ruang kolaboratif yang dirancang untuk mendorong kreativitas dan kerja tim.">Collaborative spaces designed to foster creativity and teamwork.</p>
+                </div>
+                <div>
+                    <img src="https://i.postimg.cc/5NGfhL9y/exibition-hall-1.webp" alt="Exhibition hall for events" class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2" data-en="Exhibition Halls" data-id="Aula Pameran">Exhibition Halls</h3>
+                    <p data-en="Spacious halls for hosting events, exhibitions, and conferences." data-id="Aula luas untuk menyelenggarakan acara, pameran, dan konferensi.">Spacious halls for hosting events, exhibitions, and conferences.</p>
+                </div>
+                <div>
+                    <img src="https://i.postimg.cc/Cxkp926r/rooftop-fine-dining.webp" alt="Rooftop fine dining restaurant" class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2" data-en="Rooftop Fine Dining" data-id="Restoran Fine Dining di Atap">Rooftop Fine Dining</h3>
+                    <p data-en="Exclusive rooftop restaurant offering fine dining with a view." data-id="Restoran eksklusif di atap yang menawarkan fine dining dengan pemandangan.">Exclusive rooftop restaurant offering fine dining with a view.</p>
+                </div>
+                <div>
+                    <img src="https://i.postimg.cc/yxxz5Yw0/FOOD-BEVERAGE-AREAS.webp" alt="Food and beverage areas" class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2" data-en="Food & Beverages Areas" data-id="Area Makanan & Minuman">Food & Beverages Areas</h3>
+                    <p data-en="Diverse food and beverage options to cater to all tastes." data-id="Beragam pilihan makanan dan minuman untuk memenuhi semua selera.">Diverse food and beverage options to cater to all tastes.</p>
+                </div>
+                <div>
+                    <img src="https://i.postimg.cc/sDtR6zKZ/RETAIL-AREA-1.webp" alt="Convenience store open 24/7" class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2" data-en="Convenience Store" data-id="Toko Serba Ada">Convenience Store</h3>
+                    <p data-en="24/7 convenience store for all your daily needs." data-id="Toko serba ada 24/7 untuk semua kebutuhan harian Anda.">24/7 convenience store for all your daily needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="office-space" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8" data-en="Office Space" data-id="Ruang Kantor">Office Space</h2>
+            <p class="text-lg mb-8" data-en="Spacious yet intimate enclaves for your team’s ideas and business to thrive." data-id="Ruang yang luas namun intim untuk ide dan bisnis tim Anda berkembang.">Spacious yet intimate enclaves for your team’s ideas and business to thrive.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <img src="https://i.postimg.cc/tTC0Z4R8/TYPICAL-FLOOR.webp" alt="Typical floor plan of ADR Tower" class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2" data-en="Typical Floor Plan" data-id="Rencana Lantai Tipikal">Typical Floor Plan</h3>
+                    <p data-en="Detailed floor plans for both lower and higher levels." data-id="Rencana lantai rinci untuk tingkat bawah dan atas.">Detailed floor plans for both lower and higher levels.</p>
+                </div>
+                <div>
+                    <img src="https://i.postimg.cc/Yq4Hz0NH/office-spaces-detail.webp" alt="Interior illustration of office space" class="mb-4">
+                    <h3 class="text-2xl font-bold mb-2" data-en="Building Features" data-id="Fitur Bangunan">Building Features</h3>
+                    <p data-en="Features include advanced air conditioning, double-glass panels, and high-speed elevators." data-id="Fitur termasuk pendingin udara canggih, panel kaca ganda, dan lift berkecepatan tinggi.">Features include advanced air conditioning, double-glass panels, and high-speed elevators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8" data-en="Gallery" data-id="Galeri">Gallery</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <img src="https://i.postimg.cc/25Nr6YZf/DROP-OFF-LOBBY.webp" alt="Drop-off lobby of ADR Tower" class="mb-4">
+                <img src="https://i.postimg.cc/Y0Dtqm1X/BANKING-HALL.webp" alt="Interior of the banking hall" class="mb-4">
+                <img src="https://i.postimg.cc/Cxkp926r/rooftop-fine-dining.webp" alt="Rooftop view from ADR Tower" class="mb-4">
+                <img src="https://i.postimg.cc/kMHrGC0h/wellness-center.webp" alt="Wellness centre facilities" class="mb-4">
+                <img src="https://i.postimg.cc/MKXW3dSg/co-working-spaces.webp" alt="Co-working spaces" class="mb-4">
+                <img src="https://i.postimg.cc/5NGfhL9y/exibition-hall-1.webp" alt="Exhibition hall" class="mb-4">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8" data-en="Contact Us" data-id="Hubungi Kami">Contact Us</h2>
+            <p class="text-lg mb-4" data-en="Address: Jl. Pantai Indah Kapuk Boulevard, North Jakarta" data-id="Alamat: Jl. Pantai Indah Kapuk Boulevard, Jakarta Utara">Address: Jl. Pantai Indah Kapuk Boulevard, North Jakarta</p>
+            <p class="text-lg mb-4" data-en="Name: Sandy" data-id="Nama: Sandy">Name: Sandy</p>
+            <p class="text-lg mb-4" data-en="Phone: +6281317487111" data-id="Telepon: +6281317487111">Phone: +6281317487111</p>
+            <a href="https://wa.me/6281317487111" class="text-green-500 text-3xl"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 ADR Tower. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/6281317487111" class="floating-button">
+        <i class="fab fa-whatsapp fa-2x"></i>
+    </a>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('dropdown-menu').classList.toggle('hidden');
+        });
+
+        document.getElementById('lang-en').addEventListener('click', function() {
+            document.querySelectorAll('[data-en]').forEach(function(el) {
+                el.textContent = el.getAttribute('data-en');
+            });
+        });
+
+        document.getElementById('lang-id').addEventListener('click', function() {
+            document.querySelectorAll('[data-id]').forEach(function(el) {
+                el.textContent = el.getAttribute('data-id');
+            });
+        });
+    </script>
+</body>
+</html>
